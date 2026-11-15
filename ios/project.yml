@@ -1,0 +1,48 @@
+# XcodeGen source for the app. Generate the project with `xcodegen generate` in this folder;
+# the .xcodeproj is not committed.
+name: AirAgents
+options:
+  bundleIdPrefix: app.airagents
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    # Set your own team before running on a device.
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "0.1"
+    CURRENT_PROJECT_VERSION: "1"
+packages:
+  AirAgentsCore:
+    path: AirAgentsCore
+targets:
+  AirAgents:
+    type: application
+    platform: iOS
+    sources:
+      - path: AirAgents
+    dependencies:
+      - package: AirAgentsCore
+    info:
+      path: AirAgents/Info.plist
+      properties:
+        CFBundleDisplayName: Air Agents
+        UILaunchScreen: {}
+        UIBackgroundModes: [audio]
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        NSMotionUsageDescription: AirPods head tracking lets you face an agent to pick it, and nod or shake to answer it.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.airagents.ios
+        TARGETED_DEVICE_FAMILY: "1"
+schemes:
+  AirAgents:
+    build:
+      targets:
+        AirAgents: all
+    run:
+      config: Debug
+    archive:
+      config: Release
