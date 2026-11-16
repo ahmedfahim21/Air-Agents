@@ -33,6 +33,12 @@ Functions (needs Deno 2):
 cd supabase/functions && deno test
 ```
 
+Live call to the model (needs a Bedrock API key and the model id; nothing is stored):
+
+```bash
+AWS_BEARER_TOKEN_BEDROCK=... BEDROCK_MODEL_ID=... deno run --allow-env --allow-net scripts/tryBedrock.ts
+```
+
 ## Run the app
 
 Needs Xcode, XcodeGen and iOS 26. Set `DEVELOPMENT_TEAM` in `ios/project.yml` to your own team first.
