@@ -83,7 +83,7 @@ The approval sheet, Lock Screen notification and Live Activity show the same sen
 1. The agent's character and name.
 2. The sentence, largest text.
 3. Details: recipient, account, full outgoing text (scrolls).
-4. Deny (grey capsule) and Approve (black capsule).
+4. Approve (black capsule) above Deny (grey capsule), both full width.
 
 Buttons stay disabled until the full text has been shown. Tier three: the button reads "Approve
 with Face ID" and one plain line above it says what cannot be undone. No red, no warning icons.
@@ -93,6 +93,31 @@ with Face ID" and one plain line above it says what cannot be undone. No red, no
 After the knock, each agent with news says one line from its position, agents with requests
 first. Turn to an agent and nod to hear its items one at a time. The roll call stays under about
 20 seconds; everything else is on Activity.
+
+## Places
+
+Agents pinned to a spot. Your own are private and speak up when you arrive; public ones are made
+by other people and anyone nearby can find them.
+
+- The Places list has two sections: "Your places" first, then "Around you · Public". Every row
+  carries one line saying what the agent is for.
+- Empty state: "Pin an agent to a place you go", with Home, Work, Gym and Grocery store as
+  starting points and a button to pin one where you are now.
+- Adding a place is one step, titled "When I arrive": the spot, the agent, what it should tell you.
+- Arriving follows the knock rule. Your own agent knocks from its real direction once you have
+  been inside its radius for about half a minute, or are standing still. Walking past does not count.
+- Passing a public agent plays the arrived chime only; it never speaks first. The setting keeps
+  three choices: ask me, chime only, off.
+- A public agent is marked before you talk to it: a "Public · made by someone else" tag on the
+  arrival screen, and the arrived chime instead of a knock.
+- Leaving: the voice fades with distance and the agent says one closing line. It is never cut off
+  mid-sentence.
+- Accuracy is shown, not explained: a soft radius on the map and words ("Nearby") in lists when
+  the fix is rough. No banners about GPS.
+- Find works without the screen: with AirPods in, the beacon changes when you face the agent and
+  distance is spoken at milestones ("about 50 metres").
+- Always location is asked for only when the first place is added, with the reason on that screen.
+  Your position stays on the phone.
 
 ## Sounds
 
