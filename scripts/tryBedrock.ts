@@ -1,6 +1,6 @@
 // A live, streamed call to Bedrock through the provider module, with timings.
 //
-//   AWS_BEARER_TOKEN_BEDROCK=... BEDROCK_MODEL_ID=... deno run --allow-env --allow-net scripts/tryBedrock.ts
+//   deno run --env-file=.env --allow-env --allow-net scripts/tryBedrock.ts
 //
 // BEDROCK_REGION defaults to us-east-1. Nothing is stored; the key is read from the environment only.
 import { ProviderError, streamTurn } from "../supabase/functions/_shared/provider.ts";
@@ -8,7 +8,7 @@ import { ProviderError, streamTurn } from "../supabase/functions/_shared/provide
 function required(name: string): string {
   const value = Deno.env.get(name);
   if (!value) {
-    console.error(`Set ${name} first.`);
+    console.error(`Set ${name} in .env first.`);
     Deno.exit(2);
   }
   return value;

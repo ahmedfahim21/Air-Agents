@@ -33,10 +33,18 @@ Functions (needs Deno 2):
 cd supabase/functions && deno test
 ```
 
-Live call to the model (needs a Bedrock API key and the model id; nothing is stored):
+## Secrets
+
+Copy `.env.example` to `.env` and fill it in. `.env` is git-ignored.
 
 ```bash
-AWS_BEARER_TOKEN_BEDROCK=... BEDROCK_MODEL_ID=... deno run --allow-env --allow-net scripts/tryBedrock.ts
+cp .env.example .env
+```
+
+Live call to the model (needs `AWS_BEARER_TOKEN_BEDROCK` and `BEDROCK_MODEL_ID` in `.env`):
+
+```bash
+deno run --env-file=.env --allow-env --allow-net scripts/tryBedrock.ts
 ```
 
 ## Run the app
